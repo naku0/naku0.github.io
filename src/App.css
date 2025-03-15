@@ -82,12 +82,7 @@
 
 .rct:hover, .rct:active{
     cursor: pointer;
-    animation: rotation 1s linear infinite;
-}
-
-.hsk:hover, .hsk:active{
-    cursor: pointer;
-    animation: hsk 5s ease-in-out;
+    animation: rotation 1s ease-in-out infinite;
 }
 
 main{
@@ -105,10 +100,12 @@ main{
 
 h2{
     margin: 10px;
+    font-size: 2rem;
 }
 
 main li{
     padding: 10px;
+    font-size: 1.2rem;
 }
 
 main svg{
@@ -131,7 +128,8 @@ a:visited{
 }
 
 .examples li{
-    margin: 10px;
+    font-size: 1.2rem;
+    margin: 20px;
 }
 
 @media (width<768px) {
@@ -190,48 +188,5 @@ a:visited{
     }
     to{
         transform: rotate(360deg);
-    }
-}
-
-@keyframes hsk {
-    0%{
-    }
-    10%{
-        transform: translateX(-10px);
-    }
-    20%{
-        transform: translateX(-15px) scaleX(0.75);
-    }
-    30%{
-        opacity: 0.9;
-    }
-    40%{
-        opacity: 0.1;
-        transform: translateX(100px) scaleX(1.25);
-    }
-    41%{
-        opacity: 0;
-    }
-    50%{
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    60%{
-        transform: translateX(-100px) scaleX(1.25);
-    }
-    65%{
-        opacity: 0.1;
-    }
-    70%{
-        opacity: 1;
-    }
-    80%{
-        transform: translateX(-2px) scaleX(0.75);
-    }
-    90%{
-        transform: translateX(0px);
-    }
-    100%{
-
     }
 }

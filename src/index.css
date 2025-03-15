@@ -5,10 +5,11 @@
     padding: 0;
     box-sizing: content-box;
     font-family: "Inter",sans-serif;
+
 }
 
 html {
-    width: 100svw;
+    width: 100%;
     height: 100svh;
 
     background-color: var(--white);
