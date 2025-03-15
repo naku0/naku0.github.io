@@ -1,38 +1,237 @@
-.App {
-  text-align: center;
+.about{
+    display: flex;
+    place-content: center;
+    align-items: center;
+    padding: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.about p{
+    display: flex;
+    place-content: flex-end;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.name{
+    display: flex;
+    place-content: flex-start;
+    flex-direction: column;
+    margin: 40px 80px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.picture img{
+    height: 300px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    filter: drop-shadow(8px 6px 0 rgba(144, 224, 239, 0.5));
 }
 
-.App-link {
-  color: #61dafb;
+.social{
+    display: flex;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social a{
+    height: 100%;
+    width: 100%;
+}
+
+.social ul{
+    display: flex;
+}
+
+.social li{
+    display: flex;
+    list-style-type: none;
+    height: auto;
+    width: auto;
+}
+
+.social svg{
+    width: 25px;
+    height: auto;
+    fill: black;
+    padding: 0 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.social svg:hover{
+    fill:var(--blue);
+    scale: 1.2;
+}
+
+.stack, .interests{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-items: flex-start;
+}
+
+.stack ul{
+    place-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+.head:is(.stack, .interests){
+    display: flex;
+    flex-direction: row;
+}
+
+.rct, .hsk{
+    display: flex;
+}
+
+.rct:hover, .rct:active{
+    cursor: pointer;
+    animation: rotation 1s linear infinite;
+}
+
+.hsk:hover, .hsk:active{
+    cursor: pointer;
+    animation: hsk 5s ease-in-out;
+}
+
+main{
+    display: flex;
+    place-content: space-around;
+    justify-items: center;
+
+    margin: 0 80px;
+    padding: 40px;
+
+    border-radius: 50px;
+
+    background-color: rgba(144, 224, 239, 0.2);
+}
+
+h2{
+    margin: 10px;
+}
+
+main li{
+    padding: 10px;
+}
+
+main svg{
+    width: 50px;
+    height: auto;
+}
+
+a:visited{
+    color: var(--blue);
+}
+
+::selection{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.examples{
+    padding: 40px;
+    margin: 0 80px;
+}
+
+.examples li{
+    margin: 10px;
+}
+
+@media (width<768px) {
+    .name{
+        margin: 10px 40px 0;
+    }
+
+    .about{
+        padding: 40px 0 0;
+        place-content: flex-start;
+    }
+
+    .social{
+        margin: 10px 0;
+    }
+
+    .social svg{
+        width: 40px;
+    }
+
+    .picture img{
+        display: none;
+    }
+
+    main{
+        margin: 20px;
+        padding: 10px 0;
+
+        border: none;
+        flex-direction: column;
+
+        border-radius: 20px;
+    }
+
+    .head:is(.stack, .interests){
+        margin: 0;
+    }
+
+    .stack, .interests{
+        margin: 20px 40px;
+    }
+
+    .examples{
+        padding: 10px 40px;
+        margin: 10px 0;
+    }
+
+    .examples p{
+        margin: 10px 0;
+    }
+}
+
+@keyframes rotation {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes hsk {
+    0%{
+    }
+    10%{
+        transform: translateX(-10px);
+    }
+    20%{
+        transform: translateX(-15px) scaleX(0.75);
+    }
+    30%{
+        opacity: 0.9;
+    }
+    40%{
+        opacity: 0.1;
+        transform: translateX(100px) scaleX(1.25);
+    }
+    41%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    60%{
+        transform: translateX(-100px) scaleX(1.25);
+    }
+    65%{
+        opacity: 0.1;
+    }
+    70%{
+        opacity: 1;
+    }
+    80%{
+        transform: translateX(-2px) scaleX(0.75);
+    }
+    90%{
+        transform: translateX(0px);
+    }
+    100%{
+
+    }
 }

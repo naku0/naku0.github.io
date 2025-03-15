@@ -8,8 +8,10 @@ export const AboutMe = () => {
             <div className="name">
                 <h1>Hello, I'm Alex Mamontov</h1>
                 <p>or naku0</p>
+                <p><a href="https://itmo.ru/">ITMO</a>&nbsp;CSE '2027</p>
+                <p>Russian: native language</p><p>English: upper-intermediate</p>
                 <div className="social">
-                    <p>Social links:</p>
+                    <h4>Social links:</h4>
                     <ul>
                         <li>
                             <a href="https://t.me/sniyaq">
