@@ -2,7 +2,7 @@
     display: flex;
     place-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 20px 40px;
 }
 
 .about p{
@@ -123,7 +123,7 @@ a:visited{
 }
 
 .examples{
-    padding: 40px;
+    padding: 20px 40px;
     margin: 0 80px;
 }
 
