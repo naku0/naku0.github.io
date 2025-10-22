@@ -9,6 +9,9 @@
     position: relative;
     overflow: hidden;
     min-height: 30px;
+
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 .bento-box[data-width="1"][data-height="1"] {
@@ -83,6 +86,8 @@
     padding: 20px;
     height: 100%;
     box-sizing: border-box;
+    overflow: hidden;
+    max-width: 100%;
 }
 
 .default-content, .info-content {
@@ -203,7 +208,8 @@
 
 .o-list-content,
 .u-list-content {
-    overflow-y: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
     max-height: 100%;
 }
 
@@ -214,6 +220,37 @@
     height: auto;
     display: block;
     justify-content: flex-start;
+}
+
+/* Стили для обычных task-боксов (не 1x1) */
+.bento-box.tasks-content .task-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.bento-box.tasks-content .task-content h3 {
+    margin: 0 0 8px 0;
+    color: color-mix(in srgb, var(--task-color) 90%, transparent);
+}
+
+.bento-box.tasks-content .task-content p {
+    margin: 4px 0;
+    color: color-mix(in srgb, var(--task-color) 70%, transparent);
+}
+
+/* Стили для ссылок в task */
+.bento-box.tasks-content .task-link {
+    color: color-mix(in srgb, var(--task-color) 80%, transparent);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.bento-box.tasks-content .task-link:hover {
+    color: color-mix(in srgb, var(--task-color) 100%, transparent);
+    border-bottom-color: color-mix(in srgb, var(--task-color) 50%, transparent);
 }
 
 :root {
@@ -237,25 +274,32 @@
     --list-glass: #8b5cf6;
     --list-color: #7c3aed;
 }
-
 [data-theme="dark"] {
-    --bg-glass: #1f2937;
-    --border-color: #9ca3af;
-    --text-color: #f3f4f6;
-    --text-primary: #f9fafb;
-    --text-secondary: #d1d5db;
+    --bg-glass: #0f172a;
+    --border-color: #334155;
+    --text-color: #e2e8f0;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
 
-    --c-light: rgba(255, 255, 255, 0.15);
-    --c-dark: rgba(0, 0, 0, 0.3);
-    --glass-reflex-light: 0.4;
-    --glass-reflex-dark: 0.8;
+    --c-light: rgba(255, 255, 255, 0.08);
+    --c-dark: rgba(0, 0, 0, 0.4);
+    --glass-reflex-light: 0.3;
+    --glass-reflex-dark: 0.7;
 
-    --info-glass: #60a5fa;
-    --info-color: #93c5fd;
+    --info-glass: #1e40af;
+    --info-color: #3b82f6;
 
-    --task-glass: #34d399;
-    --task-color: #6ee7b7;
+    --task-glass: #047857;
+    --task-color: #10b981;
 
-    --list-glass: #a78bfa;
-    --list-color: #c4b5fd;
+    --list-glass: #6d28d9;
+    --list-color: #8b5cf6;
+}
+
+[data-theme="dark"] .bento-box.tasks-content a.task-link {
+    color: color-mix(in srgb, var(--task-color) 60%, transparent);
+}
+
+[data-theme="dark"] .bento-box.tasks-content a.task-link:hover {
+    color: color-mix(in srgb, var(--task-color) 80%, transparent);
 }

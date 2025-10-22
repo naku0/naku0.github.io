@@ -10,7 +10,7 @@ function App() {
         <div className="app">
             <BentoGrid columns={10} rows={3} gap={10}>
                 <BoxComponent type="img" width={2} height={2}>
-                    <img src={pic} alt="Icon" />
+                    <img src={pic} alt="Icon"/>
                 </BoxComponent>
 
                 <BoxComponent type="text" width={4} height={1}>
@@ -32,10 +32,10 @@ function App() {
 
                 <BoxComponent type="img" width={1} height={1}>
                     <a href="https://github.com/naku0" target="_blank" rel="noopener noreferrer">
-                        <img src={github} alt="github" />
+                        <img src={github} alt="github"/>
                     </a>
                 </BoxComponent>
-                
+
                 <BoxComponent type="img" width={1} height={1}>
                     <a href="https://t.me/naku_work" target="_blank" rel="noopener noreferrer">
                         <img src={telegram} alt="telegram"/>
@@ -59,16 +59,14 @@ function App() {
                 </BoxComponent>
 
                 <BoxComponent type="task" width={3} height={1}>
-                    <div className="task-content">
-                        <h3><strong>Kamyu</strong></h3>
-                        <p><strong>Writing Haskell Web Framework</strong></p>
-                        <p>
-                            <a href="https://github.com/naku0/Kamyu" className="task-link">github project</a>
-                        </p>
-                        <p>
-                            <a href="/" className="task-link">Kamyu website SOON</a>
-                        </p>
-                    </div>
+                    <h3><strong>Kamyu</strong></h3>
+                    <p><strong>Writing Haskell Web Framework</strong></p>
+                    <p>
+                        <a href="https://github.com/naku0/Kamyu" className="task-link">github project</a>
+                    </p>
+                    <p>
+                        <a href="/" className="task-link">Kamyu website SOON</a>
+                    </p>
                 </BoxComponent>
 
                 <BoxComponent type="text" width={2} height={1}>
