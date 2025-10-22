@@ -7,7 +7,7 @@
     border: 1px solid color-mix(in srgb, var(--border-color) 20%, transparent);
     transition: all 0.3s ease;
     position: relative;
-    overflow: scroll;
+    overflow: hidden;
     min-height: 30px;
 }
 
