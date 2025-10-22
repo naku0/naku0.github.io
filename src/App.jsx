@@ -14,7 +14,7 @@ function App() {
                 </BoxComponent>
 
                 <BoxComponent type="text" width={4} height={1}>
-                    <h3>Мамонтов Александр</h3>
+                    <h3>Mamontov Alexander</h3>
                     <p>software engineer</p>
                 </BoxComponent>
 
